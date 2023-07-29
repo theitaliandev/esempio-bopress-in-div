@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio Botpress in &lt;div&gt;</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        /* remember to define focus styles! */
+        :focus {
+            outline: 0;
+        }
+
+        /* remember to highlight inserts somehow! */
+        ins {
+            text-decoration: none;
+        }
+
+        del {
+            text-decoration: line-through;
+        }
+
+        /* tables still need 'cellspacing="0"' in the markup */
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .center-div {
+            background-color: purple;
+            height: 50vh;
+            width: 60vw;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 3.5rem;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Esempio Chat Botpress in custom container</h1>
+    <div class="center-div">
+        <iframe width="100%" height="100%" srcdoc="<body style='width: 100%; height:100%; background: purple;'><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+            <script> 
+              window.botpressWebChat.init({
+                  'botName': 'Giulia - Grand Hotel Portovenere',
+                  'composerPlaceholder': 'Scrivi a Giulia',
+                  'botConversationDescription': 'Grand Hotel Portovenere',
+                  'botId': 'a042bccf-35ed-4955-97fa-453031d818f3',
+                  'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                  'messagingUrl': 'https://messaging.botpress.cloud',
+                  'clientId': 'a042bccf-35ed-4955-97fa-453031d818f3',
+                  'avatarUrl': 'https://cdn.galaxy.tf/uploads/3s/website/001/610/082/1610082578_5ff7e912d650a.png',
+                  'enableConversationDeletion': true,
+                  'showPoweredBy': true,
+                  'containerWidth': '100%25',
+                  'layoutWidth': '100%25',
+                  'hideWidget': true,
+                  'showCloseButton': false,
+                  'disableAnimations': true,
+                  'closeOnEscape': false,
+                  'showConversationsButton': false,
+                  'enableTranscriptDownload': false,
+                  'stylesheet': 'https://webchat-styler-css.botpress.app/prod/code/59a9bb0b-bbc9-4cb9-a28f-cd9a4d65dd65/v85574/style.css'
+              });
+            window.botpressWebChat.onEvent(function () { 
+                window.botpressWebChat.sendEvent({ type: 'show' }) 
+            }, ['LIFECYCLE.LOADED']);
+            </script></body>">
+        </iframe>
+    </div>
+</body>
+
+</html>
